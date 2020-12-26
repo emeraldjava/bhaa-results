@@ -23,7 +23,7 @@ export class RaceComponent implements OnInit {
       .then( response => {
         let json: any = response.json();
         this.posts = json;
-      })
+      });
   }
 
 }
