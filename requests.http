@@ -1,0 +1,12 @@
+// Endpoints
+
+GET http://bhaaie/wp-json/wp/v2/posts
+
+###
+
+GET http://bhaaie/wp-json/wp/v2/race
+
+###
+GET http://bhaaie/wp-json/bhaa/v2/raceresult/8338
+###
+GET http://bhaaie/wp-json/bhaa/v2/raceresult/schema
