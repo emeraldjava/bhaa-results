@@ -11,6 +11,7 @@ import {
   WpApiLoader,
   WpApiStaticLoader
 } from 'wp-api-angular';
+//import { MaterialModule } from './material/material.module';
 
 function WpApiLoaderFactory(http: Http) {
   return new WpApiStaticLoader(http, environment.restApi.uri, '');
