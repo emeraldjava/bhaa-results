@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { WpApiPosts } from 'wp-api-angular';
 import { BhaaApiService } from './../bhaa-api.service';
 
 @Component({
