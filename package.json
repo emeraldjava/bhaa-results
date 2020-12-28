@@ -24,7 +24,6 @@
     "rxjs": "~6.6.0",
     "rxjs-compat": "^6.6.3",
     "tslib": "^2.0.0",
-    "wp-api-angular": "^3.0.0-beta8",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

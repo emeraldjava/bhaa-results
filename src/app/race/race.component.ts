@@ -16,7 +16,6 @@ export class RaceComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.getRaces();
   }
 
   getRaces() {
