@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Http } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +12,7 @@ import {
   WpApiLoader,
   WpApiStaticLoader
 } from 'wp-api-angular';
+import { BhaaApiService } from './bhaa-api.service';
 //import { MaterialModule } from './material/material.module';
 
 function WpApiLoaderFactory(http: Http) {
@@ -26,13 +28,14 @@ function WpApiLoaderFactory(http: Http) {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     WpApiModule.forRoot({
       provide: WpApiLoader,
       useFactory: (WpApiLoaderFactory),
       deps: [Http]
     })
   ],
-  providers: [],
+  providers: [BhaaApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

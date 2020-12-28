@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   name: 'dev',
   restApi: {
-    uri: 'http://localhost/wp-json/wp/v2/'
+    uri: 'http://localhost/wp-json/bhaa/v2'
   }
 };
 

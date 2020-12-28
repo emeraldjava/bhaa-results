@@ -2,6 +2,6 @@ export const environment = {
   production: true,
   name: 'prod',
   restApi: {
-    uri: 'https://bhaa.ie/wp-json/wp/v2/'
+    uri: 'https://bhaa.ie/wp-json/bhaa/v2'
   }
 };

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WpApiPosts } from 'wp-api-angular';
+import { BhaaApiService } from './../bhaa-api.service';
 
 @Component({
   selector: 'race-list',
@@ -8,21 +9,22 @@ import { WpApiPosts } from 'wp-api-angular';
 })
 export class RaceComponent implements OnInit {
 
-  posts = [];
+  races = [];
 
-  constructor(private wpApiPosts: WpApiPosts) {
-    this.getPosts();
+  constructor(private bhaaApiService: BhaaApiService) {
+    this.getRaces();
   }
 
   ngOnInit(): void {
+    //this.getRaces();
   }
 
-  getPosts() {
-    this.wpApiPosts.getList()
+  getRaces() {
+    this.bhaaApiService.getRacesHttpRequest()
       .toPromise()
       .then( response => {
-        let json: any = response.json();
-        this.posts = json;
+        let json: any = response;
+        this.races = json;
       });
   }
 
