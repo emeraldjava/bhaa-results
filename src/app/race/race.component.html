@@ -1,6 +1,3 @@
-<div>
-  <h2>Races:</h2>
-  <div *ngFor="let race of races">
-     Race: {{race.name}} {{race.race}} {{race.date}}
-  </div>
-</div>
+<mat-nav-list>
+  <a *ngFor="let race of races" mat-list-item routerLink= "/raceresult/{{race.race}}"> {{ race.name }} </a>
+</mat-nav-list>

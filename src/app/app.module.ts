@@ -7,18 +7,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RaceComponent } from './race/race.component';
 import { environment } from './../environments/environment';
 import { BhaaApiService } from './bhaa-api.service';
-//import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './material/material.module';
+import { RouteModule } from './route.module';
+import { RaceresultComponent } from './raceresult/raceresult.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RaceComponent
+    RaceComponent,
+    RaceresultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule,
+    RouteModule
   ],
   providers: [BhaaApiService],
   bootstrap: [AppComponent]

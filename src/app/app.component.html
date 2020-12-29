@@ -1,30 +1,24 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="BHAA Logo"
-    src="assets/bhaa_logo_transparent.png"
-  />
-  <span>BHAA Results</span>
-</div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>bhaa</mat-icon>
+    </button>
+    <h3>BHAA Results</h3>
+    <span class="menu-spacer"></span>
+    <!--<div>
+      <a mat-button [routerLink]="'/accounts'"> Accounts </a>
+    </div>-->
+  </mat-toolbar-row>
+</mat-toolbar>
 
-<div class="content" role="main">
+<mat-card class="race-card">
+  <mat-card-header>
+    <mat-card-title>Races</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Select the year and your race.</p>
+   </mat-card-content>
+</mat-card>
 
-  <!--<mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>Shiba Inu</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.</p>
-     </mat-card-content>
-  </mat-card>-->
-
-  <div>
-    <race-list></race-list>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-  </footer>
-
-</div>
+<race-list></race-list>
