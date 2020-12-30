@@ -8,8 +8,10 @@ import { VERSION } from './../environments/version';
 })
 export class AppComponent {
   title = 'app';
+  git;
 
   constructor() {
     console.log(`Application version is: version (from package.json)=${VERSION.version}, git-tag=${VERSION.tag}, git-hash=${VERSION.hash}`);
+    this.git = VERSION;
   } 
 }
