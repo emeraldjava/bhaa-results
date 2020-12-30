@@ -1,3 +1,12 @@
+<mat-card class="race-card">
+  <mat-card-header>
+    <mat-card-title>Races</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Select the year and your race.</p>
+  </mat-card-content>
+</mat-card>
+
 <mat-nav-list>
   <a *ngFor="let race of races" mat-list-item routerLink= "/raceresult/{{race.race}}"> {{ race.name }} </a>
 </mat-nav-list>

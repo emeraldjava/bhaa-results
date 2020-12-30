@@ -4,9 +4,9 @@ import { RaceComponent } from './race/race.component';
 import { RaceresultComponent } from './raceresult/raceresult.component';
 
 const routes: Routes = [
-  //{ path: 'race' , component: RaceComponent},
+  { path: '',  redirectTo: '/races', pathMatch: 'full' },
+  { path: 'races' , component: RaceComponent},
   { path: 'raceresult/:race' , component: RaceresultComponent},
-  { path: '',  redirectTo: '/race', pathMatch: 'full' }
 ];
 
 @NgModule({

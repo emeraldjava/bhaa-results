@@ -18,5 +18,9 @@ export class BhaaApiService {
     return this.http.get(environment.restApi.uri+'/race');
   }
 
+  getRaceRresultsHttpRequest(race: number) {
+    return this.http.get(environment.restApi.uri+'/raceresult/'+race);
+  }
+
 
 }

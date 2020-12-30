@@ -1,1 +1,55 @@
-<p>raceresult works!</p>
+<mat-card class="race-card">
+  <mat-card-header>
+    <mat-card-title>Race Results</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Select the year and your race.</p>
+  </mat-card-content>
+</mat-card>
+
+<table mat-table matSort matTableResponsive [dataSource]="dataSource" >
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef>Runner</th>
+    <td mat-cell *matCellDef="let result">
+      <div>
+        <span>{{result.firstname}} {{result.surname}}</span>
+      </div>
+      <div>
+        <span>{{result.ctitle}}</span>
+        <span> | Bib:{{result.racenumber}}</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>Position</th>
+    <td mat-cell *matCellDef="let result">
+      <div>
+        <span>Place: {{result.position}}</span>
+      </div>
+      <div>
+        <span>Cat:{{result.agecategory}}</span>
+        <span> | CatPos:{{result.posincat}}</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="time">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef>Stats</th>
+    <td mat-cell *matCellDef="let result">
+      <div>
+        <span>Time: {{result.racetime}}</span>
+      </div>
+      <div>
+        <span>P:{{result.pace}}</span>
+        <span> | Std:{{result.standard}}</span>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: false"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

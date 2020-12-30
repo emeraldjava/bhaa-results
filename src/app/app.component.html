@@ -1,24 +1,11 @@
 <!-- Toolbar -->
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-icon-button>
+    <button routerLink="/" mat-icon-button>
       <mat-icon>bhaa</mat-icon>
     </button>
-    <h3>BHAA Results</h3>
+    <h3><span [style.cursor]="'pointer'" routerLink="/">BHAA Results</span></h3>
     <span class="menu-spacer"></span>
-    <!--<div>
-      <a mat-button [routerLink]="'/accounts'"> Accounts </a>
-    </div>-->
   </mat-toolbar-row>
 </mat-toolbar>
-
-<mat-card class="race-card">
-  <mat-card-header>
-    <mat-card-title>Races</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>Select the year and your race.</p>
-   </mat-card-content>
-</mat-card>
-
-<race-list></race-list>
+<router-outlet></router-outlet>

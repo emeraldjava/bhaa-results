@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "pstart": "ng serve --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "eslint -c .eslintrc.js --ext .ts src",

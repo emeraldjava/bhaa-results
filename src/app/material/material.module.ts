@@ -46,9 +46,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 //import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { MatTableResponsiveDirective } from './mat-table-responsive.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [MatTableResponsiveDirective],
   imports: [
     CommonModule,
     MatAutocompleteModule,
@@ -120,7 +121,8 @@ import { MatTableModule } from '@angular/material/table';
     MatSnackBarModule,
     MatTooltipModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatTableResponsiveDirective
   ]
 })
 export class MaterialModule { }
