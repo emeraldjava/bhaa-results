@@ -21,6 +21,6 @@ jobs:
             ${{ runner.os }}-node-
       - name: Build
         run: |
-          npm ci
           npm version
+          npm ci
           npm run-script build
