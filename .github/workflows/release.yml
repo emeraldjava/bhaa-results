@@ -23,8 +23,8 @@ jobs:
             ${{ runner.os }}-node-
       - name: Build Prod
         run: |
+          npm run-script version
           npm ci
-          npm version
           npm run-script build.prod
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
