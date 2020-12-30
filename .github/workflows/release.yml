@@ -23,7 +23,6 @@ jobs:
             ${{ runner.os }}-node-
       - name: Build Prod
         run: |
-          npm run-script version
           npm ci
           npm run-script build.prod
       - name: Upload ftp
