@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "node git-version.js && ng serve --host=0.0.0.0 --disable-host-check",
     "pstart": "node git-version.js && ng serve --prod --host=0.0.0.0 --disable-host-check",
+    "version": "node git-version.js",
     "build": "ng build",
     "build.prod": "node git-version.js && ng build --prod",
     "test": "ng test",
