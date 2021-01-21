@@ -9,5 +9,5 @@ See [results.bhaa.ie](https://results.bhaa.ie)
 
 ## Release Commands
 
-    git tag YYYY.MM.DD
-    git push origin --tags
+    git tag YYYY.MM.DD --force
+    git push origin --tags --force

@@ -10,7 +10,7 @@ import { BhaaApiService } from './bhaa-api.service';
 import { MaterialModule } from './material/material.module';
 import { RouteModule } from './route.module';
 import { RaceresultComponent } from './raceresult/raceresult.component';
-import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     HttpClientModule,
     MaterialModule,
     RouteModule,
-    NgxGoogleAnalyticsModule.forRoot('UA-131112771-1')
+    NgxGoogleAnalyticsModule.forRoot('UA-131112771-1'),
+    NgxGoogleAnalyticsRouterModule
   ],
   providers: [BhaaApiService],
   bootstrap: [AppComponent]
