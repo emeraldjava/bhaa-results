@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "~11.0.5",
     "@angular/router": "~11.0.5",
     "@w11k/git-info": "^1.0.1",
+    "ngx-google-analytics": "^11.1.0",
     "rxjs": "~6.6.0",
     "rxjs-compat": "^6.6.3",
     "tslib": "^2.0.0",
