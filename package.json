@@ -43,6 +43,7 @@
     "@typescript-eslint/eslint-plugin-tslint": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "codelyzer": "^6.0.0",
+    "cypress": "^6.3.0",
     "eslint": "^7.16.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsdoc": "^30.7.9",
