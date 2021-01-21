@@ -7,7 +7,7 @@
     "pstart": "node git-version.js && ng serve --prod --host=0.0.0.0 --disable-host-check",
     "version": "node git-version.js",
     "build": "ng build",
-    "build.prod": "node git-version.js && ng build --prod",
+    "build.prod": "ng build --prod",
     "test": "ng test",
     "lint": "eslint -c .eslintrc.js --ext .ts src",
     "e2e": "ng e2e"
