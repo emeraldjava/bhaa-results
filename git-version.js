@@ -6,9 +6,10 @@ const { writeFileSync, existsSync, mkdirSync } = require('fs-extra');
 
 const gitInfo = gitDescribeSync({
     dirtyMark: false,
-    dirtySemver: false
+    dirtySemver: false,
+    customArguments: ['--tags']
 });
-
+console.log(gitInfo);
 gitInfo.version = version;
 
 if (!existsSync(__dirname + '/src/environments')) {
