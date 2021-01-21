@@ -24,7 +24,7 @@ jobs:
       - name: Build Prod
         run: |
           npm ci
-          npm run-script version
+          npm run-script git-version
           npm run-script build.prod
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
