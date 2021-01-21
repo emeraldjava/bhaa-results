@@ -26,7 +26,7 @@ import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-go
     MaterialModule,
     RouteModule,
     NgxGoogleAnalyticsModule.forRoot('UA-3869538-1'),
-    NgxGoogleAnalyticsRouterModule
+    NgxGoogleAnalyticsRouterModule.forRoot({ include: [ '/*' ] })
   ],
   providers: [BhaaApiService],
   bootstrap: [AppComponent]
