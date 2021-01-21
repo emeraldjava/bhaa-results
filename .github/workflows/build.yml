@@ -22,5 +22,5 @@ jobs:
       - name: Build
         run: |
           npm install
-          npm run-script version
+          npm run-script git-version
           npm run-script build
