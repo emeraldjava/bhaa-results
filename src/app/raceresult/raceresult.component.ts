@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {BhaaApiService} from "../bhaa-api.service";
 import {ActivatedRoute} from "@angular/router";
 import {MatTableDataSource} from '@angular/material/table';
@@ -14,7 +14,7 @@ import {MatPaginator} from "@angular/material/paginator";
   templateUrl: './raceresult.component.html',
   styleUrls: ['./raceresult.component.css']
 })
-export class RaceresultComponent implements OnInit, AfterViewInit {
+export class RaceresultComponent implements OnInit { //}, AfterViewInit {
 
   results = [];
   displayedColumns = ['name','position','time'];
@@ -31,7 +31,7 @@ export class RaceresultComponent implements OnInit, AfterViewInit {
     //this.dataSource.sort = this.sort;
     // https://stackoverflow.com/questions/53331787/how-to-fill-an-angular-material-datatable-with-data-from-a-json
     // https://stackoverflow.com/questions/53331787/how-to-fill-an-angular-material-datatable-with-data-from-a-json
-    this.bhaaApiService.getRaceRresultsHttpRequest(race)
+    this.bhaaApiService.getRaceResultsHttpRequest(race)
       .subscribe((response: any[]) => {
         this.results = response;
         this.dataSource = new MatTableDataSource(this.results);
@@ -39,8 +39,8 @@ export class RaceresultComponent implements OnInit, AfterViewInit {
 
   }
 
-  ngAfterViewInit() {
+  //ngAfterViewInit() {
     //this.dataSource.paginator = this.paginator;
     //this.dataSource.sort = this.sort;
-  }
+  //}
 }

@@ -11,22 +11,24 @@ import { MaterialModule } from './material/material.module';
 import { RouteModule } from './route.module';
 import { RaceresultComponent } from './raceresult/raceresult.component';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { RunnerComponent } from './runner/runner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RaceComponent,
-    RaceresultComponent
+    RaceresultComponent,
+    RunnerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule,
     RouteModule,
     NgxGoogleAnalyticsModule.forRoot('UA-3869538-1'),
-    NgxGoogleAnalyticsRouterModule.forRoot({ include: [ '/*' ] })
+    NgxGoogleAnalyticsRouterModule,//.forRoot({ include: [ '/*' ] })
+    BrowserAnimationsModule
   ],
   providers: [BhaaApiService],
   bootstrap: [AppComponent]

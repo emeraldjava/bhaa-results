@@ -11,10 +11,10 @@ export class RaceComponent implements OnInit {
   races = [];
 
   constructor(private bhaaApiService: BhaaApiService) {
-    this.getRaces();
   }
 
   ngOnInit(): void {
+    this.getRaces();
   }
 
   getRaces() {

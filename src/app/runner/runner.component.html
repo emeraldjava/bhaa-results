@@ -1,26 +1,22 @@
-<mat-card class="race-card">
+<mat-card class="runner-card">
   <mat-card-header>
-    <mat-card-title>Race Results</mat-card-title>
+    <mat-card-title>Runner Results</mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-    <p>Select the year and your race.</p>
-  </mat-card-content>
 </mat-card>
 
 <table mat-table matSort matTableResponsive [dataSource]="dataSource" >
 
   <!-- Name Column -->
   <ng-container matColumnDef="name" >
-    <th mat-header-cell mat-sort-header *matHeaderCellDef>Runner</th>
+    <th mat-header-cell mat-sort-header *matHeaderCellDef>Race</th>
     <td mat-cell *matCellDef="let result">
       <div>
-        <a [routerLink]="['/runner',result.runner]">
-          <span>{{result.firstname}} {{result.surname}}</span>
+        <a routerLink= "/raceresult/{{result.race_id}}">
+          <span>{{result.event_name}}</span>
         </a>
       </div>
       <div>
-        <span>Bib:{{result.racenumber}}</span>
-        <span> | {{result.ctitle}}</span>
+        <span>Dist: {{result.race_distance}}{{result.race_unit}}</span>
       </div>
     </td>
   </ng-container>
@@ -46,7 +42,7 @@
         <span>Time: <b>{{result.racetime}}</b></span>
       </div>
       <div>
-        <span>Pace: {{result.pace}} | Std:{{result.standard}}</span>
+        <span>Std:{{result.standard}}</span>
       </div>
     </td>
   </ng-container>
@@ -54,3 +50,4 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: false"></tr>
   <tr mat-row *matRowDef="let row; let even = even; columns: displayedColumns;" [ngClass]="{gray: even}"></tr>
 </table>
+

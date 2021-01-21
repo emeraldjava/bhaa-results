@@ -11,3 +11,7 @@ See [results.bhaa.ie](https://results.bhaa.ie)
 
     git tag YYYY.MM.DD --force
     git push origin --tags --force
+
+## Analytics
+
+http://www.gachecker.com/
