@@ -5,3 +5,5 @@ table {
 .mat-column-actions {
   text-align: right;
 }
+
+.gray { background-color: #f5f5f5 }

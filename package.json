@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node git-version.js && ng serve --host=0.0.0.0 --disable-host-check",
+    "start": "ng serve --host=0.0.0.0 --disable-host-check",
     "pstart": "node git-version.js && ng serve --prod --host=0.0.0.0 --disable-host-check",
     "version": "node git-version.js",
     "build": "ng build",
