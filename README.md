@@ -6,3 +6,8 @@ An angular UI to display BHAA.ie race results.
 ## Site
 
 See [results.bhaa.ie](https://results.bhaa.ie)
+
+## Release Commands
+
+    git tag YYYY.MM.DD
+    git push origin --tags
